@@ -8,7 +8,8 @@ import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Job;
 
 /**
- * Big Data Analytics - Hadoop word count
+ * Big Data Analytics
+ * Hadoop word count without deprecated API
  */
 public class WordCount {
 
