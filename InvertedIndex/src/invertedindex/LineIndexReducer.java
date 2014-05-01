@@ -9,14 +9,15 @@ import org.apache.hadoop.mapred.Reducer;
 import org.apache.hadoop.mapred.Reporter;
 
 public class LineIndexReducer extends MapReduceBase
-        implements Reducer<Text, Text, Text, Text> {
+                    implements Reducer<Text, Text, Text, Text> {
 
     public void reduce(Text key, Iterator<Text> values,
-            OutputCollector<Text, Text> output, Reporter reporter)
-            throws IOException {
+                        OutputCollector<Text, Text> output, Reporter reporter)
+                        throws IOException {
 
         boolean first = true;
         StringBuilder toReturn = new StringBuilder();
+        
         while (values.hasNext()) {
             if (!first) {
                 toReturn.append(", ");
